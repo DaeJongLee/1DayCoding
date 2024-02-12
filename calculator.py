@@ -13,7 +13,7 @@ for i in range(1,3):
     input_ls.append(input_number)
 
 # calulating
-def perform_calculation():
+def perform_calculation(input_ls):
     calculateing = input("연산자를 입력하세요 : + - * / ")
     if calculateing == "+":
         print(input_ls[0]+input_ls[1])
@@ -22,11 +22,11 @@ def perform_calculation():
     elif calculateing == "*":         
         print((input_ls[0])*(input_ls[1]))
     elif calculateing == "/":         
-        if input_ls[0] == 0:
+        if input_ls[1] == 0:
             print("0으로는 나눌수 없습니다.")
         else:
             print((input_ls[0])/(input_ls[1]))
 
 #playing 
             
-perform_calculation()
+perform_calculation(input_ls)
