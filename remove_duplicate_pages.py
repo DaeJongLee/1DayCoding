@@ -1,5 +1,3 @@
-# use Chat GPT4
-
 import PyPDF2
 
 def remove_duplicate_pages(pdf_files):
@@ -16,11 +14,17 @@ def remove_duplicate_pages(pdf_files):
 
     with open("merged_without_duplicates.pdf", "wb") as f_out:
         output.write(f_out)
+
 route = "/Users/idaejong/Desktop/oneday/1DayCoding/pdf samples/"
-# PDF 파일 경로 리스트
-pdf_files = ['1강통증질환 1차.pdf', '1강통증질환 2차.pdf', '1강통증질환 강의록.pdf,1강통증질환강의 2차(수강생용).pdf']
-lists =[route + filename for filename in pdf_files]
+# PDF 파일 경로 리스트를 수정
+pdf_files = [
+    '1강통증질환 1차.pdf', 
+    '1강통증질환 2차.pdf', 
+    '1강통증질환 강의록.pdf',
+    '1강통증질환강의 2차(수강생용).pdf'
+]
 
-
+# 각 파일의 전체 경로를 만듦
+lists = [route + filename for filename in pdf_files]
 
 remove_duplicate_pages(lists)
